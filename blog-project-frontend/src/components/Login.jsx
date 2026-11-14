@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import auth from '../config/firebase';
 function Login() {
     const navigate = useNavigate()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [err, setErr] = useState('')
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -12,13 +14,17 @@ function Login() {
 
     const handleLogin = (e) => {
         e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password).then(() => {
+            navigate("/home")
+        }).catch(() => {
+            console.log("Invalid EmailId and Password")
+            setErr("Invalid User Credential")
+        })
 
         // Simulate login process
         console.log('User logged in:', { email, password });
 
-        // Redirect to homepage/dashboard after login
-        // Replace '/home' with your homepage route
-        navigate('/home');
+
     };
 
     return (
@@ -45,6 +51,7 @@ function Login() {
                         className="mt-1 p-2 w-full border rounded"
                     />
                 </div>
+                <p className='text-red-600 cursor-pointer my-2' >{err}</p>
                 <p className='text-blue-600 cursor-pointer my-2' onClick={() => navigate("/signup")}>New user? Register here</p>
                 <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200 ease-in-out">
                     Login
