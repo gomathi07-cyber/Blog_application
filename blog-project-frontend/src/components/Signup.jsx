@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import auth from '../config/firebase';
@@ -8,6 +8,15 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate(); // Hook from React Router for navigation
+
+    useEffect(()=>{
+         auth.onAuthStateChanged(function(user){
+            if(user)
+            {
+                navigate("/login")
+            }
+        })
+    },[])
 
     const handleSubmit = (e) => {
         e.preventDefault();

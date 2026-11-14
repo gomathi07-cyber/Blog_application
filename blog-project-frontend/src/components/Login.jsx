@@ -10,6 +10,12 @@ function Login() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        auth.onAuthStateChanged(function(user){
+            if(user)
+            {
+                navigate("/home")
+            }
+        })
     }, []);
 
     const handleLogin = (e) => {
