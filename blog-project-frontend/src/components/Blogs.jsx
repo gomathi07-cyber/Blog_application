@@ -118,9 +118,9 @@ function Blogs() {
                 </div> : ""
             }
 
-            <div className="blogs-container grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto px-4">
+            <div className="blogs-container grid grid-cols-1 md:grid-cols-2 gap-6 container mx-auto px-4 mt-10 ">
                 {blogs.map((blog) => (
-                    <div key={blog._id} className="blog-post mb-8 p-6 bg-white shadow-lg rounded-lg">
+                    <div key={blog._id} className="blog-post mb-8 p-6 bg-white shadow-lg rounded-lg border border-black">
                         <h3 className="blog-title font-semibold text-2xl text-gray-800 mb-3">{blog.newTitle}</h3>
                         <p className="blog-date text-gray-400 text-sm mb-4">{blog.date}</p>
                         <p className="blog-content text-gray-600 mb-4">{blog.newContent}</p>

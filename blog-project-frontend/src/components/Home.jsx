@@ -13,22 +13,24 @@ import P3 from "../assets/p3.png"
 import BlogImage from "../assets/blogImage.png"
 import { useNavigate } from 'react-router-dom';
 import Footer from './common/Footer'
-
+import Resume from "../assets/GOMATHI_S_Resume new.pdf"
 function Home() {
     const navigate = useNavigate()
+
     return (
         <div>
 
             <div className='flex items-center justify-center'>
                 <div className="w-full sm:w-1/2 flex-col justify-center">
-                    <h2 className='text-3xl md:text-6xl font-bold pb-2'>Hy! I Am</h2>
-                    <h2 className='text-4xl md:text-7xl font-bold text-orange-400 py-2'>Jacky Thomas</h2>
+                    <h2 className='text-3xl md:text-6xl font-bold pb-2'>Hey! I Am</h2>
+                    <h2 className='text-4xl md:text-7xl font-bold text-orange-400 py-2'>Gomathi</h2>
                     <img src={BlogProfileImage} className='w-60 block sm:hidden' alt="Blog Profile Image" />
-                    <p className='py-2'>I can create stunning website for your company, Do check my works. I won't disappoint you. Try me for 7 Days before you decide anything.</p>
-                    <button className='button-style mt-2'>Hire Me</button>
+                    <p className='py-2'>Full Stack Developer with knowledge of HTML, CSS, JavaScript, React.js, MongoDB, Node.js. Passionate about building responsive, user-friendly web applications and continuously improving technical and problem-solving skills.</p>
+                    <a href={Resume}><button className='button-style mt-2'>Hire Me</button>
+                    </a>
                 </div>
                 <div className='justify-center hidden sm:block'>
-                    <img src={BlogProfileImage} className='w-60 md:w-96 ' alt="Blog Profile Image" />
+                    <img src={BlogProfileImage} className='w-60 md:w-96 ml-10 ' alt="Blog Profile Image" />
 
                 </div>
 
@@ -61,7 +63,7 @@ function Home() {
                     <h2 className='text-3xl sm:text-7xl font-bold'>My Awesome</h2>
                     <h2 className='text-3xl sm:text-7xl font-bold text-orange-400'>Services</h2>
                     <p className='my-2'>I have attahed my Resume here for your Reference</p>
-                    <button className='button-style mt-2'>Download CV</button>
+                    <a href={Resume}><button className='button-style mt-2'>Download CV</button></a>
 
                 </div>
 
@@ -101,7 +103,7 @@ function Home() {
             </div>
 
 
-            <Footer/>
+            <Footer />
 
 
         </div>
