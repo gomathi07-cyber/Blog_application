@@ -10,18 +10,15 @@ A full-stack **MERN** blog application with a personal portfolio landing page. V
 
 | Sign Up Page | Login Page |
 |--------------|------------|
-| ![Signup](screenshots/Signup_Page.png) | ![Login](screenshots/Login_Page.png) |
+| ![Signup](screenshots/Signup%20Page.png) | ![Login](screenshots/Login%20Page.png) |
 
 | Home Page | Home Page (Footer) |
 |-----------|--------------------|
-| ![Home](screenshots/Home_Page1.png) | ![Home 2](screenshots/Home_Page2.png) |
+| ![Home](screenshots/Home%20Page1.png) | ![Home 2](screenshots/Home%20Page2.png) |
 
 | Admin Blog Page | User Blog Page |
 |-----------------|----------------|
-| ![Admin Blogs](screenshots/Admin_blog_page.png) | ![User Blogs](screenshots/User_Blog_page.png) |
-
-
----
+| ![Admin Blogs](screenshots/Admin%20blog%20page.png) | ![User Blogs](screenshots/User%20Blog%20page.png) |
 
 ## ✨ Features
 
